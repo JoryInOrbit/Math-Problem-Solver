@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Problem Solver</title>
     <link rel="icon" href="{{ url_for('static', filename='mathIcon.png') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/style.css') }}">
 </head>
 <body>
-    <form action="" id="form">
-        <label for="num1">Insert number 1</label>
-        <input type="text" id="num1">
-        <br> <br>
-        <label for="num2">Insert number 2</label>
-        <input type="text" id="num2">
-        <br> <br>
-        <input type="submit" value="Submit">
-    </form>
-    <p id="result"></p>
-    
-    <script src="{{ url_for('static', filename='logic.js') }}"></script>
+    <a href="{{ url_for('render_page', page='calculator-arithmetic') }}">CLICK HERRRREEEEE</a>
 </body>
 </html>
