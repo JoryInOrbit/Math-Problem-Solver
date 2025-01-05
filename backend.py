@@ -8,6 +8,13 @@ CORS(app)
 def home():
     return render_template('index.html')
 
+@app.route('/<page>')
+def render_page(page):
+    try:
+        return render_template(f'{page}.html')
+    except Exception:
+        return 'Page Not Found!', 404
+
 
 @app.route('/add', methods=['POST'])
 def add_numbers():
