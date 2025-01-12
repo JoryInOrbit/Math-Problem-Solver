@@ -2,7 +2,7 @@
 A concept in development for an online math problem solver.  
   
 ### Expected math problems:
-  **Basic Arithmetic** (addition, subtraction, multiplication, sivision)  
+  **Basic Arithmetic** (addition, subtraction, multiplication, division)  
   **Advanced Arithmetic** (exponentiation, roots)  
   **Algebra** (linear equations and quatratic equations, factoring polynomials, simplifying expressions)  
   **Trigonometry** (sine, cosine, tangent, inverse trigonometric functions, Pythagorean theorem)  
