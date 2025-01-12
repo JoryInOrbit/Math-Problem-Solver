@@ -3,11 +3,10 @@ const form = document.getElementById('form');
 form.addEventListener('submit', async function (event) {
     event.preventDefault(); 
 
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
+    const expression = String(document.getElementById('expression').value);
 
-    if (isNaN(num1) || isNaN(num2)) {
-        document.getElementById('result').textContent = "Please enter valid numbers.";
+    if (expression == "") {
+        document.getElementById('result').textContent = "Please enter an arithmetic expression.";
         return;
     }
 
@@ -17,7 +16,7 @@ form.addEventListener('submit', async function (event) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ input1: num1, input2: num2 }),
+            body: JSON.stringify({ expression: expression }),
         });
 
         if (!response.ok) {
