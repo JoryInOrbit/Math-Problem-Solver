@@ -27,7 +27,6 @@ def add():
         result = add_numbers(num1, num2)
     except Exception: 
         return jsonify({'error': 'Invalid input'}), 400
-
     return jsonify({'result': result})
 
 if __name__ == '__main__':
