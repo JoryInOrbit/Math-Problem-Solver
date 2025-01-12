@@ -1,1 +1,1 @@
-from .arithmetic import add_numbers
+from .arithmetic import solve_arithmetic_expression

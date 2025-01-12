@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from functions import add_numbers
+from functions import solve_arithmetic_expression
 
 app = Flask(__name__)
 CORS(app)  
@@ -20,11 +20,10 @@ def render_page(page):
 @app.route('/add', methods=['POST'])
 def add():
     data = request.get_json()
-    num1 = data.get('input1')
-    num2 = data.get('input2')
+    expression = data.get('expression')
     result = 0
     try:
-        result = add_numbers(num1, num2)
+        result = solve_arithmetic_expression(expression)
     except Exception: 
         return jsonify({'error': 'Invalid input'}), 400
     return jsonify({'result': result})
